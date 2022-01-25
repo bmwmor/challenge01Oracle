@@ -29,11 +29,25 @@ botonEncript.addEventListener("click",function(event){
     var form = document.querySelector("#input-texto"); 
     console.log(form.value);
     var encval = form.value;
-    encval = encval.replace('e', 'enter');
+    /*encval = encval.replace('e', 'enter');
     encval = encval.replace('i', 'imes');
     encval = encval.replace('a', 'ai');
     encval = encval.replace('o', 'ober');
     encval = encval.replace('u', 'ufat');
+*/
+    var re = /e/g;
+    encval = encval.replace(re, "enter");
+    re = /i/g
+    encval = encval.replace(re, 'imes');
+    re = /a/g
+    encval = encval.replace(re, 'ai');
+    re = /o/g
+    encval = encval.replace(re, 'ober');
+    re = /u/g
+    encval = encval.replace(re, 'ufat');
+
+
+
     console.log(encval);
     h2txt.textContent = "Mensaje Encriptado!!!";
     /*
